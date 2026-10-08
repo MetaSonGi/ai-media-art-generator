@@ -1,0 +1,27 @@
+# OS / 에디터
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Node (향후 빌드 도구 도입 시)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 빌드 산출물
+dist/
+build/
+out/
+
+# 로그 / 임시
+*.log
+*.tmp
+*.bak
+~*
+
+# 환경 변수
+.env
+.env.*

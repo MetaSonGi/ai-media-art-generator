@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 미디어아트 제너레이터</title>
+  <meta name="description" content="외부 AI API 키 없이 브라우저에서 바로 실행되는 실시간 생성형 미디어아트 웹앱">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="stage"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <header class="brand">
+    <h1>AI 미디어아트 제너레이터</h1>
+    <p>Generative Media Art &middot; 실시간 생성 비주얼</p>
+  </header>
+
+  <div id="notice" class="notice hidden" role="status"></div>
+
+  <button id="panelToggle" aria-label="컨트롤 패널 토글">&#9881;</button>
+
+  <aside id="panel" aria-label="컨트롤 패널">
+    <section>
+      <h2>모드</h2>
+      <div class="btn-row">
+        <button data-mode="flow" class="mode-btn">플로우 필드</button>
+        <button data-mode="audio" class="mode-btn">오디오 리액티브</button>
+        <button data-mode="kaleido" class="mode-btn">만다라</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>팔레트</h2>
+      <div id="palettes" class="palette-row"></div>
+    </section>
+
+    <section>
+      <h2>조정</h2>
+      <label class="slider">
+        <span class="slider-head">파티클 수 <em id="particleCountVal"></em></span>
+        <input type="range" id="particleCount" min="200" max="4000" step="100" value="1600">
+      </label>
+      <label class="slider">
+        <span class="slider-head">속도 <em id="speedVal"></em></span>
+        <input type="range" id="speed" min="0.2" max="3" step="0.1" value="1">
+      </label>
+      <label class="slider">
+        <span class="slider-head">색상 변화 <em id="hueShiftVal"></em></span>
+        <input type="range" id="hueShift" min="0" max="360" step="1" value="0">
+      </label>
+      <label class="slider">
+        <span class="slider-head">대칭 수 <em id="symmetryVal"></em></span>
+        <input type="range" id="symmetry" min="3" max="12" step="1" value="8">
+      </label>
+    </section>
+
+    <section>
+      <h2>액션</h2>
+      <div class="btn-grid">
+        <button id="randomizeBtn" class="action-btn">랜덤화</button>
+        <button id="fullscreenBtn" class="action-btn">전체화면</button>
+        <button id="exportBtn" class="action-btn">PNG 저장</button>
+        <button id="micBtn" class="action-btn accent">마이크 연결</button>
+      </div>
+      <p class="tip">단축키 &middot; 1/2/3 모드 전환 &middot; R 랜덤화 &middot; F 전체화면 &middot; H 패널 숨기기</p>
+      <p class="tip">마이크는 localhost 또는 HTTPS에서 동작합니다. 권한이 거부되면 대체 애니메이션이 재생됩니다.</p>
+    </section>
+  </aside>
+
+  <script src="art.js"></script>
+</body>
+</html>
