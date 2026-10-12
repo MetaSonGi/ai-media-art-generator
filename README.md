@@ -1,4 +1,13 @@
-# AI 미디어아트 제너레이터
+# 🎨 AI 미디어아트 생성기 | AI Media Art Generator
+
+> 플로우 필드·오디오 리액티브·만다라 생성형 아트  
+> Generative flow-field and audio-reactive art
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square)](https://metasongi.github.io/ai-media-art-generator/) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square)
+
+🌐 **Live:** https://metasongi.github.io/ai-media-art-generator/
+
+---
 
 외부 AI API 키 없이 브라우저에서 바로 실행되는 **실시간 생성형 미디어아트 웹앱**입니다.
 2D 캔버스와 WebAudio만으로 동작하며, 빌드 과정이 필요 없는 순수 정적 파일로 구성되어 있습니다.
